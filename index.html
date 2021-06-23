@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script defer src="audio and items.js"></script>
+	<script defer src="loadScreen.js"></script>
+	<script defer src="damage.js"></script>
+	<script defer src="runes.js"></script>
+	<script defer src="save.js"></script>
+	<script defer src="upgrades.js"></script>
+
+</head>
+
+<body>
+	<section id="loadScreen"></section>
+    
+   <section>
+     
+     <div id="container">
+     	<div id="leftContentPanel">
+
+     		<div id="avatar">
+				<progress id="health" value="1000" max="1000"></progress>
+			 </div>
+
+			 <div id="attack"></div>
+
+			 <div id="inventory">
+				<div class="upgrade-block">
+					<div id="secretShop">Secret  Shop</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/boots.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/travel.png" alt="travel">
+						<div class="cost-upgrade"> 200 </div>
+						<div id="btn1" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/bash.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/abyssal.png" alt="travel">
+						<div class="cost-upgrade"> 700 </div>
+						<div id="btn2" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/orchid.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/bloodthorn.png" alt="travel">
+						<div class="cost-upgrade"> 1000 </div>
+						<div id="btn3" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/hyper.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/Assault_Cuirass.png" alt="travel">
+						<div class="cost-upgrade"> 1400 </div>
+						<div id="btn4" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/sacred.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/Radiance.png" alt="travel">
+						<div class="cost-upgrade"> 1900 </div>
+						<div id="btn5" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+				<div class="upgrade-block">
+					<div class="upgrade-block">
+						<img src="items/eagle.png" alt="boots">
+						<img src="images/arrow.png" alt="arrow">
+						<img src="items/Butterfly.png" alt="travel">
+						<div class="cost-upgrade"> 2000 </div>
+						<div id="btn6" class="glow-on-hover button-upgrade">Upgrade now !</div>
+					</div>
+				</div>
+			 </div>
+
+
+     	</div>
+
+     	<div id="rightContentPanel">
+
+     		<div id="currency">
+
+				<img src="images/gold.png" alt="gold" height="65px">
+
+     			<div id="countOfMoney">
+					0
+				 </div>
+
+				<img class="DPSimg" src="images/DPS.png" alt="DPS" height="65px">
+
+				<div id='DPS'> 0 </div>
+
+				<div class="audios">
+					<button id="play"> <img height="80px" src="images/playBtn.png" alt=""> </button>
+					<button id="pause">	<img src="images/pauseBtn.png" height="40px" alt=""></button>
+					<button id="volume"> <img src="images/volBtn.png" height="40px" alt=""> </button>
+					<input type="range" value="0.3" max="1.0" min="0.0" step="0.1" id="rangeVolume" class="open">
+				</div>
+     	</div>
+
+
+
+     		<div id="containerOfItems">
+
+     			<div class="itemsToBuy">
+     				<div id="item1"  class="itemStyles lock">
+
+     					<div class="nameOfItem">Boots of speed</div>
+
+     					<img src="items/boots.png" alt="Boots"
+     					height="100px">
+
+     					<div class="priceOfItem">450</div>
+
+     				</div>
+     				<div id="item2" class="itemStyles lock">
+
+     					<div class="nameOfItem">Bottle</div>
+
+     					<img src="items/bottle.png" alt="bottle" height="100px">
+
+     					<div class="priceOfItem">600</div>
+
+     				</div>
+     				<div id="item3" class="itemStyles lock">
+
+     					<div class="nameOfItem">Drum of Endurance</div>
+     					
+     					<img src="items/drums.png" alt="Drums" height="100px">
+
+     					<div class="priceOfItem">1700</div>
+
+     				</div>
+     				<div id="item4" class="itemStyles lock">
+     					<div class="nameOfItem">Black King Bar</div>
+
+     					<img src="items/bkb.png" alt="bkb" height="100px">
+
+     					<div class="priceOfItem">4050</div>
+     				</div>
+     				<div id="item5" class="itemStyles lock">
+     					<div class="nameOfItem">Skull Basher</div>
+
+     					<img src="items/bash.png" alt="basher" height="100px">
+
+     					<div class="priceOfItem">2950</div>
+     				</div>
+     			</div>
+
+     			<div class="itemsToBuy">
+     				<div id="item6" class="itemStyles lock">
+     					<div class="nameOfItem">Orchid Malevolence</div>
+
+     					<img src="items/orchid.png" alt="orchid" height="100px">
+
+     					<div class="priceOfItem">3475</div>
+     				</div>
+     				<div id="item7" class="itemStyles lock">
+     					<div class="nameOfItem">Hyperstone</div>
+
+     					<img src="items/hyper.png" alt="stone" height="100px">
+
+     					<div class="priceOfItem">2000</div>
+     				</div>
+     				<div id="item8" class="itemStyles lock">
+     					<div class="nameOfItem">Sacred Relic</div>
+
+     					<img src="items/sacred.png" alt="sacred" height="100px">
+
+     					<div class="priceOfItem">3800</div>
+     				</div>
+     				<div id="item9" class="itemStyles lock">
+     					<div class="nameOfItem">Eaglesong</div>
+
+     					<img src="items/eagle.png" alt="eaglesong" height="100px">
+
+     					<div class="priceOfItem">2800</div>
+     				</div>
+     				<div id="item10" class="itemStyles lock">
+     					<div class="nameOfItem">Aghanim's Scepter</div>
+
+     					<img src="items/aganim.png" alt="aganim" height="100px">
+
+     					<div class="priceOfItem">4200</div>
+     				</div>
+     			</div>
+
+     		</div>
+     	</div>
+   		
+   	
+   	</div>
+
+   </section>
+
+</body>
+
+</html>

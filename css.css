@@ -1,0 +1,333 @@
+@font-face
+{
+	font-family: fontDota;
+	src: url('fonts/font.otf');
+}
+
+
+
+
+html, body , #container
+{
+	height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	font-family: fontDota;
+	cursor: url(cursors/cursor.cur) , default;
+}
+
+#loadScreen
+{
+	height: 100vh;
+	width: 100vw;
+	background-image: url(images/load.jpg);
+	background-size: 100% 116%;
+	background-position-y: -80px;
+	z-index: 10;
+	box-shadow: inset 0px 0px 300px 200px rgba(0,0,0,0.75);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
+
+#container
+{
+	display: flex;
+}
+
+#leftContentPanel
+{
+	height: 100%;
+	width: 30%;
+	display: flex;
+	background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/251910/2ddb15dcd1a18d282015cd88e55803443937ca9b.jpg');
+	background-size: cover;
+	background-position: 20px;
+	animation: 30s animBgLeftPanel infinite alternate;
+	transition: .3s;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+#rightContentPanel
+{
+	height: 100%;
+	width: 70%;
+	background-image: url('https://i.pinimg.com/originals/0d/91/db/0d91dbf119a1c9f4cf500aaf7e695539.jpg');
+	background-size: cover;
+	background-position: -60px;
+}
+
+#avatar
+{
+	height: 300px;
+	width: 300px;
+	background-image: url('creeps/level1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+}
+
+#containerOfItems
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	margin-top: 40px;
+}
+
+#countOfMoney , #DPS
+{
+	height: 50px;
+	width: 50%;
+	font-size: 40px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.DPSimg
+{
+	margin-left: 500px;
+}
+
+#currency
+{
+	height: 30px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.itemsToBuy
+{
+	display: flex;
+	width: 50%;
+	height: 100%;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#souls
+{
+	display: flex;
+	height: 100%;
+	width: 90px;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+.itemStyles
+{
+	height: 100px;
+	width: 85%;
+	display: flex;
+	margin-top: -80px;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}
+
+.itemStyles:hover
+{
+	transition: 0.8s;
+	box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.7);
+}
+
+#attack
+{
+	height: 70px;
+	width: 70px;
+	display: flex;
+	justify-content: center;
+	border: 2px solid black;
+	border-radius: 50%;
+	background-image: url(images/attack.png);
+	background-size: cover;
+	cursor: pointer;
+}
+
+.nameOfItem
+{
+	font-size: 30px;
+	color: white;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+}
+
+.priceOfItem
+{
+	width: 100px;
+	color: white;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.lock
+{
+	cursor: not-allowed;
+	background-color: darkgrey;
+	box-shadow: inset 0px 0px 0px 200px rgba(0,0,0,0.7);
+}
+.rune
+{
+	content: '';
+}
+#health
+{
+	height: 20px;
+	width: auto;
+	display: flex;
+	background-color: green;
+	justify-content: center;
+}
+.audios
+{
+	display: flex;
+	justify-content: flex-end;
+	width: 90%;
+	margin-top: 12px;
+}
+#play,#pause,#volume
+{
+	height: 40px;
+	width: 40px;
+	background-color: transparent;
+	border:none;
+	box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.75);
+	user-select: none;
+	margin-left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+
+.open
+{
+	display: none;
+}
+#secretShop
+{
+	color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+}
+#inventory
+{
+	height: 600px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #25262a;
+}
+.upgrade-block
+{
+	height: 80px;
+	width: 100%;
+	display: flex;
+	border: 1px solid black ;
+	box-shadow: inset 0px 30px 19px -10px rgba(0,0,0,0.75);
+	border-bottom: 4px solid #292b2c;
+}
+.cost-upgrade
+{
+	display: flex;
+	align-items: center;
+	color: azure;
+	margin-left: 50px;
+}
+.button-upgrade
+{
+	height: inherit;
+	display: flex;
+	align-items: center;
+	color: white;
+	margin-left: 30px;
+	cursor: pointer;
+	justify-content: center;
+}
+.button-upgrade:hover
+{
+	transition: 0.3s;
+	transform: scale(1.1);
+}
+.glow-on-hover {
+	width: 170px;
+	height: 100%;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #111;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+}
+
+.glow-on-hover:before {
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left:-2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	
+}
+
+.glow-on-hover:active {
+	color: #000
+}
+
+.glow-on-hover:active:after {
+	background: transparent;
+}
+
+.glow-on-hover:hover:before {
+	opacity: 1;
+}
+
+.glow-on-hover:after {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+@keyframes glowing {
+	0% { background-position: 0 0; }
+	50% { background-position: 400% 0; }
+	100% { background-position: 0 0; }
+}
+
+@keyframes animBgLeftPanel 
+{
+	to
+	{
+		background-position: -1200px;
+	}
+}
